@@ -5,6 +5,7 @@ setup(
     version="0.1.0",
     description="Climate analysis tools for generating maps and time-series",
     author="Bijan Fallah",
+    author_email="bijan.fallah@gmail.com",
     packages=find_packages(),
     install_requires=[
         "numpy",
