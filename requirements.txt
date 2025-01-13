@@ -1,0 +1,12 @@
+numpy
+xarray
+dask
+intake
+matplotlib
+cartopy
+xesmf
+requests_cache
+seaborn
+tqdm
+fsspec
+cftime
