@@ -24,8 +24,8 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-    "dependency1>=1.0",
-    "dependency2>=2.0",
+    "numpy>=1.22.0",
+    "pandas>=1.4.0",
 ]
 
 [project.optional-dependencies]
@@ -37,3 +37,6 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["."]
+[project.scripts]
+generate-time-series = "climate_analysis.time_series:generate_time_series"
+generate-maps = "climate_analysis.maps:generate_maps"
