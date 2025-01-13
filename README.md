@@ -69,15 +69,6 @@ generate-time-series \
 ### Map Visualizations
 Generate map visualizations of regridded climate variable differences between scenarios.
 
-#### Command
-```bash
-generate-maps \
-    --catalog_url https://storage.googleapis.com/cmip6/pangeo-cmip6.json \
-    --experiments ssp126 \
-    --lat_range 35 57 \
-    --lon_range 45 88 \
-    --output map_output.png
-```
 
 #### Example
 ```bash
@@ -87,6 +78,15 @@ generate-maps \
     --lat_range 35 57 \
     --lon_range 45 87 \
     --output climate_map.png
+```
+```bash
+generate-time-series --catalog_url https://storage.googleapis.com/cmip6/pangeo-cmip6.json \
+                     --experiments historical ssp585\   
+                     --lat_range 35 57 \
+                     --lon_range 45 88 \
+                     --climatology_start 1981 \
+                     --climatology_end 2010 \
+                     --output time_series_output.png --variable tas
 ```
 
 #### Output
