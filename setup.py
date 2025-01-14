@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="climate_analysis",
-    version="0.1.0",
+    version="0.1.5",
     description="Climate analysis tools for generating maps and time-series",
     author="Bijan Fallah",
     author_email="bijan.fallah@gmail.com",
@@ -12,12 +12,14 @@ setup(
         "xarray",
         "dask",
         "intake",
+        "intake-esem"
         "matplotlib",
         "cartopy",
         "xesmf",
         "requests_cache",
         "seaborn",
         "tqdm",
+        "gcsfs",
     ],
     entry_points={
         "console_scripts": [

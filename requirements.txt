@@ -1,7 +1,8 @@
-numpy
+numpy<=1.24
 xarray
 dask
-intake
+intake==1.6.1
+intake-esm
 matplotlib
 cartopy
 xesmf
@@ -10,3 +11,4 @@ seaborn
 tqdm
 fsspec
 cftime
+gcsfs

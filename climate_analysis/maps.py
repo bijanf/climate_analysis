@@ -168,15 +168,10 @@ def plot_ensemble_mean(
 
         cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7])
         cbar = fig.colorbar(img, cax=cbar_ax, orientation="vertical", extend="both")
-        # cbar.set_label("Temperature Difference (K)")
+        #cbar.set_label("Temperature Difference (K)")
         plt.savefig(output_path, dpi=300, bbox_inches="tight")
         plt.close()
-        # Save the list of models to a text file
-        models_file = output_path.replace(".png", "_models.txt")
-        with open(models_file, "w") as file:
-            file.write("Models used in the time series plot:\n")
-            file.writelines(f"- {model}\n" for model in source_ids)
-        print(f"List of models saved as {models_file}")
+        
     except Exception as e:
         print(f"Error during ensemble mean plotting: {e}")
 
@@ -259,6 +254,9 @@ def main():
     else:
         print("No valid differences for ensemble mean calculation.")
 
+def generate_maps():
+    """Wrapper function for the CLI entry point to generate climate maps."""
+    main()
 
 if __name__ == "__main__":
     main()

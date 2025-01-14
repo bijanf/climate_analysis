@@ -10,6 +10,15 @@ The Climate Analysis Package is a powerful tool designed for analyzing climate d
 - **Automated Processing**: Handles CMIP6 datasets, including preprocessing and anomaly computation.
 
 ## Installation
+- via `pypi` : 
+
+```bash
+pip install climate-analysis
+```
+
+- via `github`:
+
+
 1. Clone the repository:
    ```bash
    git clone <repository_url>

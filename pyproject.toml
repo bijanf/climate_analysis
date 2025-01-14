@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "climate_analysis"
-version = "0.1.1"
+version = "0.1.5"
 description = "The Climate Analysis Package is a powerful tool designed for analyzing climate data with a focus on generating time-series visualizations and map-based insights."
 readme = "README.md"
 license = {file = "LICENSE"}
@@ -24,7 +24,7 @@ classifiers = [
 ]
 requires-python = ">=3.7"
 dependencies = [
-    "numpy>=1.22.0",
+    "numpy>=1.22.0,<1.25",
     "pandas>=1.4.0",
 ]
 

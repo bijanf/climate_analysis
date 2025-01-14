@@ -308,6 +308,9 @@ def main():
     )
 
 
-# Keep this for direct execution as a script
+def generate_time_series():
+    """Wrapper function for the CLI entry point to generate time series plots."""
+    main()
+
 if __name__ == "__main__":
     main()
