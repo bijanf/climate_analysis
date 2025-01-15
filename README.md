@@ -6,7 +6,7 @@ The Climate Analysis Package is a powerful tool designed for analyzing climate d
 ## Example pngs: 
 - Near surface temperature changes w.r.t. 1981-2010 reference
 
-![time-series](time_series_plot_EU.png)
+![time-series](time_series_plot_CA.png)
 
 - SSP585 w.r.t. 1981-2010 at the end of the century 2071-2099
 

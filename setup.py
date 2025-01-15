@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="climate_analysis",
-    version="0.1.8",
+    version="0.1.10",
     description="Climate analysis tools for generating maps and time-series",
     author="Bijan Fallah",
     author_email="bijan.fallah@gmail.com",
