@@ -217,14 +217,13 @@ def generate_time_series_plot(
         [ds.reset_coords(drop=True) for ds in dsets_aligned_.values()], dim=source_da
     )
     df_all = big_ds.sel(year=slice(1900, 2100)).to_dataframe().reset_index()
-    # Exclude the last year of the historical period
-    historical_end_year = (
-        climatology_end  # This corresponds to the end year of the climatology
-    )
+    # Exclude the last 2 year of the historical period 
+    # because of the running mean
+
     df_all = df_all[
         ~(
             (df_all["experiment_id"] == "historical")
-            & (df_all["year"] == historical_end_year)
+            & (df_all["year"] == climatology_end  -1)
         )
     ]
     # Compute climatology
@@ -240,7 +239,10 @@ def generate_time_series_plot(
     df_all[f"{variable}_anomaly"] = df_all.apply(
         lambda row: row[variable] - climatology["historical"], axis=1
     )
-
+    # Save the processed DataFrame locally
+    df_all.to_csv("df_all_processed.csv", index=False)  # Save as CSV
+    # Or use df_all.to_parquet("df_all_processed.parquet") for Parquet format
+    print("Processed DataFrame saved as 'df_all_processed.csv'")
     # Plotting the time series
     g = sns.relplot(
         data=df_all,
