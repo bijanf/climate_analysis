@@ -3,6 +3,15 @@
 ## Overview
 The Climate Analysis Package is a powerful tool designed for analyzing climate data with a focus on generating **time-series visualizations** and **map-based insights**. This package supports processing CMIP6 data, calculating regional means, and visualizing climate anomalies, making it ideal for climate scientists, researchers, and data analysts.
 
+## Example pngs: 
+- Near surface temperature changes w.r.t. 1981-2010 reference
+
+![time-series](time_series_plot_EU.png)
+
+- SSP585 w.r.t. 1981-2010 at the end of the century 2071-2099
+
+![Maps](climate_map_CA_ssp585.png)
+
 ## Features
 - **Time-Series Analysis**: Generate detailed time-series plots of temperature or other variables over time for specified experiments.
 - **Map Visualizations**: Create spatial maps of climate variables, regridded to a specified resolution.
@@ -21,7 +30,7 @@ pip install climate-analysis
 
 1. Clone the repository:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/bijanf/climate_analysis.git
    ```
 
 2. Navigate to the package directory:
@@ -45,18 +54,6 @@ The package provides two main functionalities: **time-series plots** and **map-b
 ### Time-Series Plots
 Generate time-series plots to visualize climate variable anomalies over time.
 
-#### Command
-```bash
-generate-time-series \
-    --catalog_url https://storage.googleapis.com/cmip6/pangeo-cmip6.json \
-    --experiments historical ssp585 \
-    --lat_range 35 57 \
-    --lon_range 45 88 \
-    --climatology_start 1981 \
-    --climatology_end 2010 \
-    --output time_series_output.png \
-    --variable tas
-```
 
 #### Example
 ```bash
@@ -74,6 +71,7 @@ generate-time-series \
 #### Output
 - **Plot**: Saved as `time_series_output.png`.
 - **Model List**: A text file `time_series_output_models.txt` containing all models used for the plot.
+- **df_all_processed.csv**: A csv file of dataframe of time-series. 
 
 ### Map Visualizations
 Generate map visualizations of regridded climate variable differences between scenarios.
@@ -83,21 +81,11 @@ Generate map visualizations of regridded climate variable differences between sc
 ```bash
 generate-maps \
     --catalog_url https://storage.googleapis.com/cmip6/pangeo-cmip6.json \
-    --experiments historical ssp585 \
+    --experiments ssp585 \
     --lat_range 35 57 \
     --lon_range 45 87 \
     --output climate_map.png
 ```
-```bash
-generate-time-series --catalog_url https://storage.googleapis.com/cmip6/pangeo-cmip6.json \
-                     --experiments historical ssp585\   
-                     --lat_range 35 57 \
-                     --lon_range 45 88 \
-                     --climatology_start 1981 \
-                     --climatology_end 2010 \
-                     --output time_series_output.png --variable tas
-```
-
 #### Output
 - **Map**: Saved as `map_output.png`.
 
@@ -109,7 +97,7 @@ We welcome contributions to the Climate Analysis Package! To contribute:
 
 2. **Clone Your Fork**:
    ```bash
-   git clone <your_fork_url>
+   git clone https://github.com/bijanf/climate_analysis.git
    ```
 
 3. **Create a New Branch**:
@@ -122,7 +110,7 @@ We welcome contributions to the Climate Analysis Package! To contribute:
    - Follow the existing code style and conventions.
 
 5. **Test Your Changes**:
-   - Ensure all tests pass by running NOT implemented yet :
+   - Ensure all tests pass by running **NOT** implemented yet :
      ```bash
      pytest
      ```
