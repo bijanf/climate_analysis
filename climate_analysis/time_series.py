@@ -223,7 +223,7 @@ def generate_time_series_plot(
     df_all = df_all[
         ~(
             (df_all["experiment_id"] == "historical")
-            & (df_all["year"] == climatology_end  -1)
+            & (df_all["year"] >= 2013)
         )
     ]
     # Compute climatology
