@@ -6,11 +6,12 @@ The Climate Analysis Package is a powerful tool designed for analyzing climate d
 ## Example pngs: 
 - Near surface temperature changes w.r.t. 1981-2010 reference
 
-![time-series](time_series_plot_CA.png)
+![time-series](https://raw.githubusercontent.com/bijanf/climate_analysis/main/time_series_plot_CA.png)
 
 - SSP585 w.r.t. 1981-2010 at the end of the century 2071-2099
 
-![Maps](climate_map_CA_ssp585.png)
+![Maps](https://raw.githubusercontent.com/bijanf/climate_analysis/main/climate_map_CA_ssp585.png)
+
 
 ## Features
 - **Time-Series Analysis**: Generate detailed time-series plots of temperature or other variables over time for specified experiments.
